@@ -4,7 +4,6 @@ Taller práctico de persistencia de datos en Java. Hice una aplicación de conso
 
 El taller pedía un "Sistema de Gestión de Productos". Yo lo adapté a una biblioteca, entonces en vez de productos manejo libros.
 
-Autora: Danna
 
 ## Qué hace
 
