@@ -1,0 +1,4 @@
+target/
+biblioteca.db
+biblioteca.log
+*.lck
