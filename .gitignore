@@ -2,3 +2,4 @@ target/
 biblioteca.db
 biblioteca.log
 *.lck
+dependency-reduced-pom.xml
