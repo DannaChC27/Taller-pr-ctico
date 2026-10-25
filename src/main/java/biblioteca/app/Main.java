@@ -10,18 +10,12 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
-/**
- * Capa de presentación (consola) del Sistema de Gestión de Biblioteca.
- */
+
 public class Main {
 
     private static final Logger logger = Logger.getLogger(Main.class.getName());
     private static final Scanner scanner = new Scanner(System.in);
     private static final LibroDAO dao = new LibroDAO();
-
-    // ========================================================
-    // PROGRAMA PRINCIPAL
-    // ========================================================
 
     public static void main(String[] args) {
 
@@ -90,10 +84,6 @@ public class Main {
         System.out.println("================================");
     }
 
-    // --------------------------------------------------------
-    // CREATE - Registrar libro (RF1)
-    // --------------------------------------------------------
-
     private static void registrarLibro() {
         try {
             String codigo = leerTextoObligatorio("Ingrese el código del libro: ");
@@ -117,10 +107,6 @@ public class Main {
         }
     }
 
-    // --------------------------------------------------------
-    // READ - Mostrar todos (RF2)
-    // --------------------------------------------------------
-
     private static void mostrarLibros() {
         try {
             imprimirLista(dao.listar(), "No hay libros registrados.");
@@ -128,10 +114,6 @@ public class Main {
             manejarErrorBD("consultar los libros", e);
         }
     }
-
-    // --------------------------------------------------------
-    // READ - Buscar por código o título (RF2)
-    // --------------------------------------------------------
 
     private static void buscarLibros() {
         try {
@@ -141,10 +123,6 @@ public class Main {
             manejarErrorBD("buscar libros", e);
         }
     }
-
-    // --------------------------------------------------------
-    // UPDATE - Actualizar libro (RF3)
-    // --------------------------------------------------------
 
     private static void actualizarLibro() {
         try {
@@ -189,10 +167,6 @@ public class Main {
         }
     }
 
-    // --------------------------------------------------------
-    // DELETE - Eliminar libro con confirmación (RF4)
-    // --------------------------------------------------------
-
     private static void eliminarLibro() {
         try {
             String codigo = leerTextoObligatorio("Ingrese el código del libro: ");
@@ -221,10 +195,6 @@ public class Main {
             manejarErrorBD("eliminar el libro", e);
         }
     }
-
-    // ========================================================
-    // UTILIDADES DE ENTRADA Y SALIDA
-    // ========================================================
 
     private static void imprimirLista(List<Libro> libros, String mensajeVacio) {
         if (libros.isEmpty()) {
@@ -261,7 +231,6 @@ public class Main {
         return scanner.nextLine().trim();
     }
 
-    /** Pide un precio y repite hasta que sea un número no negativo. */
     private static double leerPrecio(String mensaje) {
         while (true) {
             System.out.print(mensaje);
@@ -273,7 +242,6 @@ public class Main {
         }
     }
 
-    /** Igual que leerPrecio, pero Enter devuelve null (sin cambios). */
     private static Double leerPrecioOpcional(String mensaje) {
         while (true) {
             System.out.print(mensaje);
@@ -308,7 +276,6 @@ public class Main {
         }
     }
 
-    /** Pide una cantidad y repite hasta que sea un entero no negativo. */
     private static int leerCantidad(String mensaje) {
         while (true) {
             System.out.print(mensaje);
@@ -320,7 +287,6 @@ public class Main {
         }
     }
 
-    /** Igual que leerCantidad, pero Enter devuelve null (sin cambios). */
     private static Integer leerCantidadOpcional(String mensaje) {
         while (true) {
             System.out.print(mensaje);
