@@ -9,7 +9,10 @@
   },
   "customizations": {
     "vscode": {
-      "extensions": ["vscjava.vscode-java-pack"]
+      "extensions": ["vscjava.vscode-java-pack"],
+      "settings": {
+        "task.allowAutomaticTasks": "on"
+      }
     }
   },
   "postCreateCommand": "mvn -q package -DskipTests"
