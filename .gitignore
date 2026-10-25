@@ -1,5 +1,4 @@
-target/
 biblioteca.db
 biblioteca.log
-*.lck
+target/
 dependency-reduced-pom.xml
