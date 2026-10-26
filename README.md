@@ -97,4 +97,4 @@ java -jar target/gestion-biblioteca.jar
 
 ## Video
 
-Enlace al video: (pendiente)
+Enlace al video: https://youtu.be/j1VP4CDG6gg
