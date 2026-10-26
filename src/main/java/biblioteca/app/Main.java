@@ -20,7 +20,7 @@ public class Main {
     public static void main(String[] args) {
 
         LogConfig.configurar();
-
+//try conecction para inicializar la base de datos 
         try {
             ConexionDB.inicializar();
         } catch (SQLException e) {
